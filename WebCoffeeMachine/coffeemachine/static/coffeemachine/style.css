@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    margin: 100px;
+}
+
+h1 {
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size:60px;
+}
+
+.image-grid {
+	--gap: 50px;
+	--num-cols: 3;
+	--row-height: 300px;
+    --margin: 50px;
+
+    margin: var(--margin);
+	padding: var(--gap);
+	display: grid;
+	box-sizing: border-box;
+	grid-template-columns: repeat(var(--num-cols), 1fr);
+	grid-auto-rows: var(--row-height);
+    justify-content: center;
+	gap: var(--gap);
+
+}
+
+.image-grid>img {
+    width: 100%;
+    height: 100%;
+	object-fit: cover;
+}
+
+/* Anything udner 1024px */
+@media screen and (max-width: 1024px) {
+	.image-grid {
+		--num-cols: 2;
+		--row-height: 200px;
+	}
+}
