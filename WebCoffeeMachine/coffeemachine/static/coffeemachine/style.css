@@ -60,3 +60,8 @@ h1 {
 	padding: .625rem .5rem;
 	background: white;
   }
+
+  a {
+	text-decoration: none;
+	color: black;
+  }
