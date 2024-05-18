@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'coffeemachine/style.css' %}">
+    </head>
+
+    <body>
+        <h1>What would like today?</h1>
+        <div class="wrapper">
+            <div class="grid">
+                <div class="grid-item">
+                    <a href={% url 'coffeemachine:detail'  'Black Coffee' %} target="_blank">
+                        <figure>
+                            <img src="{% static 'coffeemachine/images/black-coffee.png' %}" alt="My image">
+                            <figcaption>Black Coffee</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href={% url 'coffeemachine:detail'  'Cappuccino' %} target="_blank">
+                    <figure>
+                        <img src="{% static 'coffeemachine/images/cappuccino.png' %}" alt="My image">
+                        <figcaption>Cappuccino</figcaption>
+                    </figure>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href={% url 'coffeemachine:detail'  'White Coffee' %} target="_blank">
+                    <figure>
+                        <img src="{% static 'coffeemachine/images/white-coffee.jpg' %}" alt="My image">
+                        <figcaption>White Coffee</figcaption>
+                    </figure>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href={% url 'coffeemachine:detail'  'Doppio' %} target="_blank">
+                    <figure>
+                        <img src="{% static 'coffeemachine/images/doppio.jpg' %}" alt="My image">
+                        <figcaption>Doppio</figcaption>
+                    </figure>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href={% url 'coffeemachine:detail'  'Espresso Coffee' %} target="_blank">
+                    <figure>
+                        <img src="{% static 'coffeemachine/images/espresso-coffee.png' %}" alt="My image">
+                        <figcaption>Espresso Coffee</figcaption>
+                    </figure>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href={% url 'coffeemachine:detail'  'Hot Chocolate' %} target="_blank">
+                    <figure>
+                        <img src="{% static 'coffeemachine/images/hot-chocolate.jpg' %}" alt="My image">
+                        <figcaption>Hot Chocolate</figcaption>
+                    </figure>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href={% url 'coffeemachine:detail'  'Hibiscus Tea' %} target="_blank">
+                    <figure>
+                        <img src="{% static 'coffeemachine/images/hibiscus-tea.jpg' %}" alt="My image">
+                        <figcaption>Hibiscus Tea</figcaption>
+                    </figure>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href={% url 'coffeemachine:detail'  'Green Tea' %} target="_blank">
+                    <figure>
+                        <img src="{% static 'coffeemachine/images/Green-Tea.png' %}" alt="My image">
+                        <figcaption>Green Tea</figcaption>
+                    </figure>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href={% url 'coffeemachine:detail'  'Black Tea' %} target="_blank">
+                    <figure>
+                        <img src="{% static 'coffeemachine/images/black-tea.jpeg' %}" alt="My image">
+                        <figcaption>Black Tea</figcaption>
+                    </figure>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
