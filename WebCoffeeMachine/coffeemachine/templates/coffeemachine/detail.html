@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'coffeemachine/style.css' %}">
+    </head>
+
+    <body>
+        <h1>Your Selection</h1>
+        <div class="detail-block">
+            <img src="{% get_static_prefix %}{{ item.image }}" alt="item image">
+            <div class="pane">
+                <div class="row-1">{{ item.name }}</div>
+                <div class="row-2">
+                    <div class="price-div">{{ item.price }}</div>
+                    <div id="count-square" class="square">1</div>
+                    <br> 
+                    <div id="plus-square" class="square">+</div>
+                    <br>
+                    <div class="square">-</div>
+                </div>
+            </div>
+        </div>
+
+        <script data-name="{{ item.name }}">
+            const data = document.currentScript.dataset;
+            const item = data.name;
+            
+            document.getElementById("page-title").textContent = item
+        </script>
+            
+    </body>
+</html>
