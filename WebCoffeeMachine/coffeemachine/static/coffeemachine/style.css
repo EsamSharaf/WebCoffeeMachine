@@ -8,6 +8,7 @@ h1 {
     text-align: center;
     color: white;
     font-size:50px;
+	margin-top: 80px;
 }
 .grid {
 	max-width: 1000px;
@@ -70,24 +71,25 @@ h1 {
   h3 {
 	color: white;
   }
-  .detail-block {
+  .detail-block-1-1 {
 	display: flex;
 	justify-content: center;
 	margin-top: 100px;
   }
 
-  .detail-block img {
-	height: 400px;
-	width: 400px;
+  .detail-block-1-1 img {
+	height: 500px;
+	width: 500px;
   }
   
-  .detail-block .pane{
-	margin-left: 6px;
+  .detail-block-1-1-pane {
+	width: 300px;
+	margin-left: 5px;
   }
 
-  .detail-block .pane .row-1 {
+  .row-1 {
 	height: 70px;
-	width: 250px;
+	width: inherit;
 	background-color: white;
 	display: flex;
 	justify-content:center;
@@ -96,28 +98,32 @@ h1 {
 	font-weight: bold;
 	font-family: "Times New Roman", Helvetica, sans-serif;
   }
-  .detail-block .pane .row-2 {
+
+  .row-2 {
 	display: flex;
 	justify-content:right;
-	margin-top: 30px;
+	margin-top: 44px;
+	width: inherit;
   }
 
-  .detail-block .pane .row-2 .price-div {
+  #price-div {
 	width: 60px;
 	font-size: 180%;
 	color: white;
 	font-family: "Times New Roman", Helvetica, sans-serif;
+	padding-top: 5px;
   }
 
-  .price-div:before {
+  #price-div:before {
     content: '\FF04';
     font-size: 90%;
   }
 
-  .square {
+  #count-square {
 	height: 50px;
-	width: 45px;
-	background-color: white;
+	width: 50px;
+	background-color: rgb(182, 178, 178);
+	padding-right: 10px;
 	margin-left: 10px;
 	display: flex;
 	justify-content:center;
@@ -126,13 +132,63 @@ h1 {
 	font-weight: bold;
   }
 
-  #count-square {
+  #plus-butn, #minus-butn {
 	height: 50px;
-	width: 50px;
-	background-color: grey;
-	padding-right: 10px;
+	width: 45px;
+	margin-left: 10px;
+	display: flex;
+	justify-content:center;
+  	align-items: center;
+	font-size: 250%;
+	font-weight: bold;
+	border-radius: 0px;
   }
 
-  #plus-square {
-	color: rgb(73, 61, 61);
+  #minus-butn {
+	color: black;
+  }
+
+  #plus-butn {
+	color: grey;
+  }
+
+  .row-3 {
+	height: 70px;
+	width: inherit;
+	margin-top: 44px;
+	display: flex;
+	justify-content:center;
+  	align-items: center;
+	font-size: 180%;
+	color: white;
+	font-family: "Times New Roman", Helvetica, sans-serif;
+  }
+
+  .row-4 {
+	height: 70px;
+	width: inherit;
+	margin-top: 44px;
+	display: flex;
+	justify-content:center;
+  	align-items: center;
+	font-size: 180%;
+	color: white;
+	background-color: rgb(112, 177, 112);
+	font-family: "Times New Roman", Helvetica, sans-serif;
+	font-weight: bold;
+	border-style: solid;
+	border-width: medium;
+	border-color: #FFFFFF;
+  }
+
+  .detail-block-2 {
+	width: 700px;
+	margin: 50px auto;
+	color: white;
+	font-size: 160%;
+	text-align: justify;
+  }
+
+  .detail-block-1, .detail-block-2 {
+	display: block;
   }
