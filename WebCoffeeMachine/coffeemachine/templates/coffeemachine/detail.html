@@ -7,27 +7,52 @@
 
     <body>
         <h1>Your Selection</h1>
-        <div class="detail-block">
-            <img src="{% get_static_prefix %}{{ item.image }}" alt="item image">
-            <div class="pane">
-                <div class="row-1">{{ item.name }}</div>
-                <div class="row-2">
-                    <div class="price-div">{{ item.price }}</div>
-                    <div id="count-square" class="square">1</div>
-                    <br> 
-                    <div id="plus-square" class="square">+</div>
-                    <br>
-                    <div class="square">-</div>
+        <div class="detail-block-1">
+            <div class="detail-block-1-1">
+                <img src="{% get_static_prefix %}{{ item.image }}" alt="item image">
+                <div class="detail-block-1-1-pane">
+                    <div class="row-1">{{item.name}}</div>
+                    <div class="row-2">
+                        <div id="price-div" data-price="{{ item.price }}">{{item.price}}</div>
+                        <div id="count-square" class="square"><a id="clicks">1</a></div>
+                        <button id="plus-butn" onClick="onClickPlusOne()">+</button>
+                        <button id="minus-butn" onClick="onClickMinusOne()">-</button>
+                    </div>
+                    <div class="row-3">
+                        <p id="before-total-text">TOTAL:&#65129;<span id="total">{{item.price}}</span></p>
+                    </div>
+                    
+                    <div class="row-4">PAY NOW</div>
                 </div>
             </div>
         </div>
+        <div class="detail-block-2">
+            {{item.description}}
+        </div>
 
-        <script data-name="{{ item.name }}">
-            const data = document.currentScript.dataset;
-            const item = data.name;
+        <script>
+            let element = document.getElementById("price-div")
+            let data = element.dataset
+            let unit_price = parseFloat(data.price)
+            let clicks = 1;
+
+            function onClickPlusOne() {
+                if (clicks <= 9) {
+                    clicks += 1;
+                    console.log(clicks)
+                    document.getElementById("clicks").innerHTML = clicks;
+                    document.getElementById("total").innerHTML = (unit_price*clicks).toFixed(2);
+                }
+            };
             
-            document.getElementById("page-title").textContent = item
+            function onClickMinusOne() {
+                if (clicks > 1) {
+                    clicks -= 1;
+                    document.getElementById("clicks").innerHTML = clicks;
+                    document.getElementById("total").innerHTML = (unit_price*clicks).toFixed(2);
+                }
+            };
         </script>
-            
+
     </body>
 </html>
