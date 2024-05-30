@@ -60,9 +60,9 @@ h1 {
 }
 
 .grid-item figcaption {
-display: block;
-padding: .625rem .5rem;
-background: white;
+	display: block;
+	padding: .625rem .5rem;
+	background: white;
 }
 
 a {
