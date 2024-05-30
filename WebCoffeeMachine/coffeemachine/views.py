@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Item
 
 # Create your views here.
@@ -11,5 +11,5 @@ def home(request):
 
 def detail(request, name):
     item = get_object_or_404(Item, name=name)
-
-    return render(request, "coffeemachine/detail.html", {"item": item})
+    context = {"item": item}
+    return render(request, "coffeemachine/detail.html", context)
