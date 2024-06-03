@@ -1,11 +1,11 @@
-from django.shortcuts import render
-
-# Create your views here.
 from django.http import HttpResponse
+from django.views.generic import ListView
+from .models import Item
 
 
-def home(request):
-    return render(request, "coffeemachine/home.html")
+class HomeListView(ListView):
+    model = Item
+    template_name = "coffeemachine/home.html"
 
 
 def detail(request, name):
