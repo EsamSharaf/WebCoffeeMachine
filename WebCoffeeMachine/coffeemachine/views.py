@@ -10,5 +10,5 @@ class HomeListView(ListView):
 
 class ItemDetailPage(DetailView):
     model = Item
-    pk_url_kwarg = 'name'
+    slug_url_kwarg = 'slug'
     template_name = "coffeemachine/detail.html"
