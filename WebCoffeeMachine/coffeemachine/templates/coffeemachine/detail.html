@@ -41,7 +41,6 @@
             function onClickPlusOne() {
                 if (clicks <= 9) {
                     clicks += 1;
-                    console.log(clicks)
                     document.getElementById("clicks").innerHTML = clicks;
                     document.getElementById("total").innerHTML = (unit_price*clicks).toFixed(2);
                     sessionStorage.setItem("order_count", clicks);
