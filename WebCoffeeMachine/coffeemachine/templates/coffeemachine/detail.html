@@ -44,6 +44,7 @@
                     console.log(clicks)
                     document.getElementById("clicks").innerHTML = clicks;
                     document.getElementById("total").innerHTML = (unit_price*clicks).toFixed(2);
+                    sessionStorage.setItem("order_count", clicks);
                 }
             };
             
@@ -52,6 +53,7 @@
                     clicks -= 1;
                     document.getElementById("clicks").innerHTML = clicks;
                     document.getElementById("total").innerHTML = (unit_price*clicks).toFixed(2);
+                    sessionStorage.setItem("order_count", clicks);
                 }
             };
         </script>
