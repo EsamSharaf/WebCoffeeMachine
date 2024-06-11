@@ -1,10 +1,10 @@
 
-![This is an alt text.](https://duckduckgo.com/?q=django+&t=newext&atb=v225-1&iax=images&ia=images&iai=https%3A%2F%2Fstatic.djangoproject.com%2Fimg%2Flogos%2Fdjango-logo-negative.1d528e2cb5fb.png "This is a sample image.")
+![This is an alt text.](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.skillshare.com%2Fuploads%2Fvideo%2Fthumbnails%2Ff0aea9994cfe1700f7c20165d24818fb%2Foriginal&f=1&nofb=1&ipt=a9522fbb84b106f409950f283aeb64b77d346886f8c642f4a6d0c90c1539ac9a&ipo=images "This is a sample image.")
 
 # WebCoffeeMachine
 
 ## Description
-Django project with class based viewes. The project currently in development phase.
+Django project with class-based viewes. The project currently in development phase.
 
 ## Environment
 
