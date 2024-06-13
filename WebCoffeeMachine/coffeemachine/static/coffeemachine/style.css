@@ -73,18 +73,18 @@ a {
 h3 {
 	color: white;
 }
-.detail-block-1-1 {
+.content {
 	display: flex;
 	justify-content: center;
 	margin-top: 100px;
 }
 
-.detail-block-1-1 img {
+.content img {
 	height: 500px;
 	width: 500px;
 }
 
-.detail-block-1-1-pane {
+.contentRight {
 	width: 300px;
 	margin-left: 5px;
 }
