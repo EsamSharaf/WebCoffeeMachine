@@ -24,7 +24,7 @@
                         </div>
                         
                         <div class="row-4">
-                            <a href='' target="_self">PAY NOW</a>
+                            <a href='javascript:onClickPayBtn()' target="_self">PAY NOW</a>
                         </div>
                     </div>
                 </div>
@@ -60,6 +60,18 @@
                     sessionStorage.setItem("order_count", clicks);
                 }
             };
+
+            function onClickPayBtn() {
+                document.getElementById("overlay").style.display='block';
+                document.getElementById("container").style.opacity=0.5;
+            };
+
+            document.body.addEventListener('keydown', function(e) {
+                if (e.key == "Escape") {
+                    document.getElementById("overlay").style.display='none';
+                    document.getElementById("container").style.opacity=1;
+                }
+            });
         </script>
 
     </body>
