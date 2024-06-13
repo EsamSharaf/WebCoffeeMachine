@@ -194,3 +194,31 @@ h3 {
 .detail-block-1, .detail-block-2 {
 	display: block;
 }
+
+#container {
+	opacity: 1;
+}
+
+#overlay {
+	position: fixed;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 35%;
+	left: 45%;
+	display: none;
+	color: white;
+	font-family: "Times New Roman", Helvetica, sans-serif;
+}
+
+#overlay img {
+	width: 50%;
+	height: 50%;
+}
+
+#overlay { animation: fadeIn 1s; }
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+  }
