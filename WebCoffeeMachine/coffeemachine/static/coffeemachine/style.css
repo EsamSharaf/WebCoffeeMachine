@@ -209,14 +209,13 @@ h3 {
 	display: none;
 	color: white;
 	font-family: "Times New Roman", Helvetica, sans-serif;
+	animation: fadeIn 1s;
 }
 
 #overlay img {
 	width: 50%;
 	height: 50%;
 }
-
-#overlay { animation: fadeIn 1s; }
 
 @keyframes fadeIn {
 	0% { opacity: 0; }
