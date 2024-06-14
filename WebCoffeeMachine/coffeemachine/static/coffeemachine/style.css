@@ -73,18 +73,18 @@ a {
 h3 {
 	color: white;
 }
-.detail-block-1-1 {
+.content {
 	display: flex;
 	justify-content: center;
 	margin-top: 100px;
 }
 
-.detail-block-1-1 img {
+.content img {
 	height: 500px;
 	width: 500px;
 }
 
-.detail-block-1-1-pane {
+.contentRight {
 	width: 300px;
 	margin-left: 5px;
 }
@@ -193,4 +193,31 @@ h3 {
 
 .detail-block-1, .detail-block-2 {
 	display: block;
+}
+
+#container {
+	opacity: 1;
+}
+
+#overlay {
+	position: fixed;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 35%;
+	left: 45%;
+	display: none;
+	color: white;
+	font-family: "Times New Roman", Helvetica, sans-serif;
+	animation: fadeIn 1s;
+}
+
+#overlay img {
+	width: 50%;
+	height: 50%;
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
 }
