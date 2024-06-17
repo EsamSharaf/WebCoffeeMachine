@@ -204,12 +204,13 @@ h3 {
 	width: inherit;
 	height: inherit;
 	position: absolute;
-	top: 35%;
-	left: 45%;
+	top: 10%;
+	left: 35%;
 	display: none;
 	color: white;
 	font-family: "Times New Roman", Helvetica, sans-serif;
 	animation: fadeIn 1s;
+	text-align: center;
 }
 
 #overlay img {
