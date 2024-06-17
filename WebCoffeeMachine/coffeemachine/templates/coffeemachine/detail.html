@@ -65,12 +65,19 @@
             function onClickPayBtn() {
                 document.getElementById("overlay").style.display='block';
                 document.getElementById("container").style.opacity=0.5;
+                timer1 = setTimeout(show_prepare_message, 3000);
+            };
+
+            function show_prepare_message() {
+                document.getElementById("overlay-text").textContent='Preparing your order';
+                document.getElementById("overlay-img").src ="{% get_static_prefix %}coffeemachine/images/3-dots-flashes.gif";
             };
 
             document.body.addEventListener('keydown', function(e) {
                 if (e.key == "Escape") {
                     document.getElementById("overlay").style.display='none';
                     document.getElementById("container").style.opacity=1;
+                    clearTimeout(timer1);
                 }
             });
         </script>
