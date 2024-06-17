@@ -34,10 +34,11 @@
             </div>
         </div>
         <div id="overlay">
-            <h2>Please make the payment</h2>
-            <img src="{% get_static_prefix %}coffeemachine/images/cashless_payment-transparent.png" alt="alt-image">
+            <h1 id="overlay-text">Please make the payment</h1>
+            <img id="overlay-img" src="" alt="alt-image">
         </div>
         <script>
+            document.getElementById("overlay-img").src = "{% get_static_prefix %}coffeemachine/images/cashless_payment-transparent.png"; 
             let element = document.getElementById("price-div")
             let data = element.dataset
             let unit_price = parseFloat(data.price)
