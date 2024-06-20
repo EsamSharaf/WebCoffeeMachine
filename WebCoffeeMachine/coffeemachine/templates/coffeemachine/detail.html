@@ -76,7 +76,7 @@
             function showPrepareMessage() {
                 document.getElementById("overlay-text").textContent='Preparing your order';
                 document.getElementById("overlay-img").src ="{% get_static_prefix %}coffeemachine/images/3-dots-flashes.gif";
-                timer2 = setTimeout(showCollectMessage, 5000);
+                CollectMessageTimer = setTimeout(showCollectMessage, 5000);
             };
 
             function showCollectMessage() {
