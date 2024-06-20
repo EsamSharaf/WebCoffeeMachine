@@ -70,16 +70,16 @@
                 count = sessionStorage.getItem("order_count");
                 document.getElementById("overlay").style.display='block';
                 document.getElementById("container").style.opacity=0.5;
-                timer1 = setTimeout(show_prepare_message, 3000);
+                timer1 = setTimeout(showPrepareMessage, 3000);
             };
 
-            function show_prepare_message() {
+            function showPrepareMessage() {
                 document.getElementById("overlay-text").textContent='Preparing your order';
                 document.getElementById("overlay-img").src ="{% get_static_prefix %}coffeemachine/images/3-dots-flashes.gif";
-                timer2 = setTimeout(show_collect_message, 5000);
+                timer2 = setTimeout(showCollectMessage, 5000);
             };
 
-            function show_collect_message() {
+            function showCollectMessage() {
                 document.getElementById("overlay-text").textContent='Please collect your order';
                 document.getElementById("overlay-img").src ="{% get_static_prefix %}coffeemachine/images/circle_green_tick.png";
                 count--;
@@ -90,7 +90,7 @@
                     document.getElementById("overlay-homeBtn").style.display='block';
                 }
                 else {
-                    timer3 = setTimeout(show_prepare_message, 5000);
+                    timer3 = setTimeout(showPrepareMessage, 5000);
                 }
             }
 
