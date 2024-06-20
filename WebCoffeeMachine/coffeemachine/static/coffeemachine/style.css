@@ -3,7 +3,7 @@ body {
 	font-size: 14px
 }
 
-h1 {
+h1, h2 {
     justify-content: center;
     text-align: center;
     color: white;
@@ -222,3 +222,11 @@ h3 {
 	0% { opacity: 0; }
 	100% { opacity: 1; }
 }
+
+#overlay a {
+	color: white;
+}
+
+#overlay-homeBtn {
+	display: none;
+  }

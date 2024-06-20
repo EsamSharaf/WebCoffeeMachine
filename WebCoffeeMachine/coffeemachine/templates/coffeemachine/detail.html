@@ -36,6 +36,7 @@
         <div id="overlay">
             <h1 id="overlay-text">Please make the payment</h1>
             <img id="overlay-img" src="" alt="alt-image">
+            <h2 id="overlay-homeBtn"><a href={% url 'coffeemachine:home' %}>Home Page</a></h2>
         </div>
         <script>
             document.getElementById("overlay-img").src = "{% get_static_prefix %}coffeemachine/images/cashless_payment-transparent.png"; 
@@ -43,6 +44,9 @@
             let data = element.dataset
             let unit_price = parseFloat(data.price)
             let clicks = 1;
+            let count;
+
+            sessionStorage.setItem("order_count", clicks);
 
             function onClickPlusOne() {
                 if (clicks <= 9) {
@@ -63,15 +67,32 @@
             };
 
             function onClickPayBtn() {
+                count = sessionStorage.getItem("order_count");
                 document.getElementById("overlay").style.display='block';
                 document.getElementById("container").style.opacity=0.5;
-                timer1 = setTimeout(show_prepare_message, 3000);
+                timer1 = setTimeout(showPrepareMessage, 3000);
             };
 
-            function show_prepare_message() {
+            function showPrepareMessage() {
                 document.getElementById("overlay-text").textContent='Preparing your order';
                 document.getElementById("overlay-img").src ="{% get_static_prefix %}coffeemachine/images/3-dots-flashes.gif";
+                CollectMessageTimer = setTimeout(showCollectMessage, 5000);
             };
+
+            function showCollectMessage() {
+                document.getElementById("overlay-text").textContent='Please collect your order';
+                document.getElementById("overlay-img").src ="{% get_static_prefix %}coffeemachine/images/circle_green_tick.png";
+                count--;
+
+                if (count == 0) {
+                    sessionStorage.clear();
+                    document.getElementById("overlay-text").textContent='Order completed!';
+                    document.getElementById("overlay-homeBtn").style.display='block';
+                }
+                else {
+                    timer3 = setTimeout(showPrepareMessage, 5000);
+                }
+            }
 
             document.body.addEventListener('keydown', function(e) {
                 if (e.key == "Escape") {
