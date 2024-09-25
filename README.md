@@ -4,9 +4,11 @@
 # WebCoffeeMachine
 
 ## Description
-Django project with class-based viewes. The project currently in development phase.
+Every morning, the coffee machine is the most important thing to get a good coffee and start off the day. So I thought to build a web app of a coffee machine. I developed the app using Django to expolore its capabilities and to sharpen the problem solving skills of mine.
 
 ## Environment
+
+Python version: 3.9
 
 ```
 cd WebCoffeeMachine
@@ -29,7 +31,7 @@ pip install -r requirements.txt
 ### Run Django
 
 ```
-python manage.py runserver 8080
+python manage.py runserver
 ```
 
 Then, enter the link in the browser: http://127.0.0.1:8080/coffeemachine/
