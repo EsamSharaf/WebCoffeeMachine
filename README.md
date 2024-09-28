@@ -35,3 +35,9 @@ python manage.py runserver
 ```
 
 Then, enter the link in the browser: http://127.0.0.1:8080/coffeemachine/
+
+### UI Testing with Selenuim
+
+```
+./manage.py test tests.test_functional.MySeleniumTests.test_e2e
+```
